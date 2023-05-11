@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_fortune_wheel/flutter_fortune_wheel.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:material_dialogs/material_dialogs.dart';
-import 'package:material_dialogs/shared/types.dart';
-import 'package:material_dialogs/widgets/buttons/icon_button.dart';
 import 'package:ontecso_components/Spinwheel/Spinwheel_Page_Components/coupon_box.dart';
 import 'package:ontecso_components/Spinwheel/Spinwheel_Page_Components/json_list.dart';
 import 'package:rxdart/rxdart.dart';

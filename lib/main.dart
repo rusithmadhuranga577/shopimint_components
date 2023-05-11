@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ontecso_components/Spinwheel/spinwheel_page.dart';
+import 'package:ontecso_components/ReferralPage/referral_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SpinwheelPage(),
+      home: const ReferralPage(),
     );
   }
 }
