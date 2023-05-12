@@ -43,8 +43,6 @@ class _QuestionsSectionState extends State<QuestionsSection> {
 
               const Question(),
 
-              const Question(),
-
             ],
           ),
         ),
