@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ShareButton extends StatefulWidget {
   const ShareButton({super.key});
@@ -10,53 +11,30 @@ class ShareButton extends StatefulWidget {
 class _ShareButtonState extends State<ShareButton> {
   @override
   Widget build(BuildContext context) {
-
-      return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.purple,
-      ),
-      onPressed: () {},
-      child: const Text('Test'),
-    );
-
-    // return ElevatedButton(
-    //   onPressed: () { },
-    //   style: ButtonStyle(
-    //     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-    //       RoundedRectangleBorder(
-    //         borderRadius: BorderRadius.circular(80.0),
-    //       )
-    //     )
-    //   ),
-      
-    //   child: Ink(
-    //     decoration: BoxDecoration(
-    //       borderRadius: BorderRadius.circular(80),
-    //       gradient: const LinearGradient(
-    //         colors: [
-    //           Color.fromARGB(255, 169, 17, 230),
-    //           Color.fromARGB(255, 224, 76, 250),
-    //         ],
-    //         begin: Alignment.topLeft,
-    //         end: Alignment.bottomRight,
-    //       ),
-    //     ),
-
-    //     child: Container(
-    //       width: 100,
-    //       constraints: const BoxConstraints(
-    //         // minWidth: 88.0, 
-    //         minHeight: 36.0,
-    //         maxWidth: double.infinity
-    //       ), 
-    //       alignment: Alignment.center,
+    return Center(
+      child: ElevatedButton.icon(
+        label: Text(
+          ' Share',
+          textAlign: TextAlign.center,
+          style: GoogleFonts.inter(
+              color: Colors.white, fontSize: 17, fontWeight: FontWeight.w700),
+        ),
+        icon: const Icon(Icons.share_rounded),
+        onPressed: () {
           
-    //       child: const Text(
-    //         'Share Link',
-    //         textAlign: TextAlign.center,
-    //       ),
-    //     ),
-    //   ),
-    // );
+        },
+        style: ElevatedButton.styleFrom(
+          fixedSize: const Size(140, 40),
+          foregroundColor: Colors.white60,
+          backgroundColor: const Color.fromARGB(255, 37, 88, 230),
+          textStyle: GoogleFonts.inter(
+              color: Colors.white54, fontSize: 16, fontWeight: FontWeight.w600),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30.0),
+          ),
+          shadowColor: Colors.purple,
+        ),
+      ),
+    );
   }
 }

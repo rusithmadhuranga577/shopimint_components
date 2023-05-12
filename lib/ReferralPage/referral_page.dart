@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Components/Background/background.dart';
+import 'Components/FAQ/questions_section.dart';
 
 class ReferralPage extends StatefulWidget {
   const ReferralPage({super.key});
@@ -13,14 +14,14 @@ class _ReferralPageState extends State<ReferralPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Center(
-          child: Column(
-            children: const [
-              Background(),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Background(),
 
-              
-            ],
-          )
+            QuestionsSection(),
+            
+          ],
         ),
       ),
     );

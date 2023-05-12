@@ -15,38 +15,42 @@ class _BackgroundState extends State<Background> {
     return Stack(
       alignment: AlignmentDirectional.bottomCenter,
       children: <Widget> [
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(50),
-                  bottomRight: Radius.circular(50),
+
+        SizedBox(
+          height: 540,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                width: double.infinity,
+                height: 510,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(50),
+                    bottomRight: Radius.circular(50),
+                  ),
+                  gradient: LinearGradient(
+                    colors: [
+                      Color.fromARGB(255, 20, 70, 235),
+                      Colors.purple,
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
                 ),
-                gradient: LinearGradient(
-                  colors: [
-                    Color.fromARGB(255, 20, 70, 235),
-                    Colors.purple,
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-              ),
-            
-              child: const ReferralTitle(),
               
-            ),
-          ]
+                child: const ReferralTitle(),
+                
+              ),
+            ]
+          ),
         ),
 
         const Positioned(
+          bottom: 7,
           child: ShareButton()
         ),
-
-
       ]
     );
   }

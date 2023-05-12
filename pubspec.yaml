@@ -45,6 +45,7 @@ dependencies:
 
   # Spinwheel
   flutter_fortune_wheel: ^1.2.0
+  expandable: ^5.0.1
   
 
 dev_dependencies:

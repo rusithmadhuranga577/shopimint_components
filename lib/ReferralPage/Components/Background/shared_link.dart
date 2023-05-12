@@ -1,5 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SharedLink extends StatefulWidget {
@@ -23,10 +24,10 @@ class _SharedLinkState extends State<SharedLink> {
         height: 45,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          gradient: const LinearGradient(
+          gradient: LinearGradient(
             colors: [
-              Color.fromARGB(255, 169, 17, 230),
-              Color.fromARGB(255, 224, 76, 250),
+              Colors.purple.withOpacity(0.5),
+              Colors.purpleAccent.withOpacity(0.5),
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -37,6 +38,7 @@ class _SharedLinkState extends State<SharedLink> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children:  [
             Container(
+              padding: const EdgeInsets.all(10.0),
               decoration: const BoxDecoration(
                 border: Border(
                   right: BorderSide(
@@ -48,9 +50,10 @@ class _SharedLinkState extends State<SharedLink> {
               width: 200,
               height: 50,
               child: Center(
-                child: SelectableText('shared link',
-                  textAlign: TextAlign.start,
-                  style: GoogleFonts.inter(
+                child: SelectableText('shared link shared link shared link shared link',
+                maxLines: 1,
+                textAlign: TextAlign.start,
+                style: GoogleFonts.inter(
                     color: Colors.white70, 
                     fontSize: 15, 
                     fontWeight: FontWeight.w600
@@ -63,12 +66,17 @@ class _SharedLinkState extends State<SharedLink> {
               width: 50,
               height: 50,
               child: Center(
-                child: Text('Copy Link',
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.inter(
-                    color: Colors.white70, 
-                    fontSize: 12, 
-                    fontWeight: FontWeight.w800
+                child: TextButton(
+                  onPressed: () {
+                    Clipboard.setData(const ClipboardData(text: 'shared link'));
+                  },
+                  child: Text('Copy Link',
+                    textAlign: TextAlign.center, 
+                    style: GoogleFonts.inter(
+                      color: Colors.white70, 
+                      fontSize: 12, 
+                      fontWeight: FontWeight.w800
+                    ),
                   ),
                 ),
               ),
