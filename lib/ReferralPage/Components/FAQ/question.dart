@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Question extends StatefulWidget {
-  const Question({super.key});
+  Map<String, dynamic> item;
+  Question({super.key, required this.item});
 
   @override
   State<Question> createState() => _QuestionState();
@@ -20,25 +21,18 @@ class _QuestionState extends State<Question> {
         bodyAlignment: ExpandablePanelBodyAlignment.left,
         iconPlacement: ExpandablePanelIconPlacement.right,
       ),
-      
-      header: Text('What is Refer and Earn Program?',
+      header: Text(widget.item['qus'],
         textAlign: TextAlign.start,
         style: GoogleFonts.inter(
-          color: Colors.black, 
-          fontSize: 14, 
-          fontWeight: FontWeight.w700
-        ),
+            color: Colors.black, fontSize: 14, fontWeight: FontWeight.w700),
       ),
-
       collapsed: const Text(''),
-
-      expanded: Text('What is Refer and Earn Program What is Refer and Earn Program What is Refer and Earn Program',
+      expanded: Text(widget.item['ans'],
         textAlign: TextAlign.start,
         style: GoogleFonts.inter(
-          color: Colors.black.withOpacity(0.65), 
-          fontSize: 14, 
-          fontWeight: FontWeight.w500
-        ),
+            color: Colors.black.withOpacity(0.65),
+            fontSize: 14,
+            fontWeight: FontWeight.w500),
       ),
     );
   }

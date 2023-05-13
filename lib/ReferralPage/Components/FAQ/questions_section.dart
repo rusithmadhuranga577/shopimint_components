@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ontecso_components/ReferralPage/Components/FAQ/data.dart';
 import 'package:ontecso_components/ReferralPage/Components/FAQ/question.dart';
 
 class QuestionsSection extends StatefulWidget {
@@ -35,13 +36,17 @@ class _QuestionsSectionState extends State<QuestionsSection> {
               ),
 
               const SizedBox(height: 20),
-              
-              const Question(),
 
-              const Question(),
-
-              const Question(),
-
+              ListView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) {
+                  return Question(
+                    item: questionList[index],
+                  );
+                },
+                itemCount: questionList.length,
+              ),
             ],
           ),
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 import 'package:ontecso_components/ReferralPage/Components/Background/shared_link.dart';
 
 class ReferralTitle extends StatefulWidget {
@@ -52,34 +53,10 @@ class _ReferralTitleState extends State<ReferralTitle> {
 
         const SizedBox(height: 20),
 
-        Image.asset(
-          'assets/images/gift_box.png',
-          height: 100.0,
-          fit: BoxFit.cover,
-        ),
-
-        SizedBox(
-          child: Text(
-            '100',
-            textAlign: TextAlign.center,
-            style: GoogleFonts.lato(
-              color: Colors.white,
-              fontSize: 25,
-              fontWeight: FontWeight.w800,
-            ),
-          ),
-        ),
-
-        SizedBox(
-          child: Text(
-            'LoyaltyPoints',
-            textAlign: TextAlign.center,
-            style: GoogleFonts.lato(
-              color: Colors.white,
-              fontSize: 15,
-              fontWeight: FontWeight.w800,
-            ),
-          ),
+        Lottie.asset(
+          'assets/lottie/gift_box.json',
+            width: 140,
+            height: 140
         ),
 
         const SizedBox(height: 20),
