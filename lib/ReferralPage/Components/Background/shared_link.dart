@@ -50,7 +50,7 @@ class _SharedLinkState extends State<SharedLink> {
               width: 200,
               height: 50,
               child: Center(
-                child: SelectableText('shared link shared link shared link shared link',
+                child: SelectableText('shared link shared link shared link',
                 maxLines: 1,
                 textAlign: TextAlign.start,
                 style: GoogleFonts.inter(
@@ -68,7 +68,7 @@ class _SharedLinkState extends State<SharedLink> {
               child: Center(
                 child: TextButton(
                   onPressed: () {
-                    Clipboard.setData(const ClipboardData(text: 'shared link'));
+                    Clipboard.setData(const ClipboardData(text: 'shared link shared link shared link'));
                   },
                   child: Text('Copy Link',
                     textAlign: TextAlign.center, 

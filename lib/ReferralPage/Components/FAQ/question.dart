@@ -24,7 +24,10 @@ class _QuestionState extends State<Question> {
       header: Text(widget.item['qus'],
         textAlign: TextAlign.start,
         style: GoogleFonts.inter(
-            color: Colors.black, fontSize: 14, fontWeight: FontWeight.w700),
+            color: Colors.black, 
+            fontSize: 14, 
+            fontWeight: FontWeight.w700
+        ),
       ),
       collapsed: const Text(''),
       expanded: Text(widget.item['ans'],
@@ -32,7 +35,8 @@ class _QuestionState extends State<Question> {
         style: GoogleFonts.inter(
             color: Colors.black.withOpacity(0.65),
             fontSize: 14,
-            fontWeight: FontWeight.w500),
+            fontWeight: FontWeight.w500
+        ),
       ),
     );
   }
